@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PoliklinikApps">
         <activity
-            android:name=".Activity.DetailResepActivity"
+            android:name=".Activity.MenuActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.DetailPemeriksaanActivity"
