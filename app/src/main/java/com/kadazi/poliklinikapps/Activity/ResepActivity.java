@@ -37,7 +37,7 @@ public class ResepActivity extends AppCompatActivity {
     }
     public void tampilData(){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ResponseModelResep> tampilData = arData.listResep();
+        Call<ResponseModelResep> tampilData = arData.listResep(1);
 
         tampilData.enqueue(new Callback<ResponseModelResep>() {
             @Override
