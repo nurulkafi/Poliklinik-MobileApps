@@ -36,7 +36,7 @@ public class AdapterDataResep extends RecyclerView.Adapter<AdapterDataResep.Hold
     @Override
     public void onBindViewHolder(@NonNull HolderDataResep holder, int position) {
         DataModelResep dm =list.get(position);
-        holder.nama_dokter.setText("Nama Dokter :" + dm.getNama());
+        holder.nama_dokter.setText(dm.getNama());
         holder.nama_poliklinik.setText(dm.getPoli());
         holder.tgl.setText(dm.getTanggal());
         if(dm.getTanggal().equals("tidak ada")){

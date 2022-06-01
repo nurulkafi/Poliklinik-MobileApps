@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
-    private static final String baseURL ="http://192.168.1.12:8080/LaravelPoliklinik/public/api/";
+    private static final String baseURL ="http://192.168.137.1/poliklinik/public/api/";
     private static Retrofit retro;
 
     public static Retrofit konekRetrofit(){
