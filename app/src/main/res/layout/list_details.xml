@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:id="@+id/TextObat"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:text="Obat "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/TextDosis"
+        android:layout_width="147dp"
+        android:layout_marginStart="23dp"
+        android:layout_height="wrap_content"
+        android:text="Dosis "
+        android:textSize="16sp" />
+
+</LinearLayout>
+

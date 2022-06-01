@@ -23,13 +23,16 @@
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/drawable/ic_launcher_background.xml" value="0.144" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_daftar.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_daftarbaru.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_detail_pemeriksaan.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_detail_resep.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_resep.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_riwayat_pemeriksaan.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/activity_splash_screen.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/details.xml" value="0.22" />
+        <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/details.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/list_daftar.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/list_resep.xml" value="0.22" />
+        <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/list_details.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/list_resep.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/Zikri Afnan/Downloads/Poliklinik-MobileApps/app/src/main/res/layout/list_riwayat_pemeriksaan.xml" value="0.17552083333333332" />
       </map>
     </option>

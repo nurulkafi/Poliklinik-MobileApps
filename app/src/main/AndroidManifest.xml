@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PoliklinikApps">
         <activity
+            android:name=".Activity.DetailResepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetailPemeriksaanActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.RiwayatPemeriksaanActivity"
             android:exported="false" />
         <activity
