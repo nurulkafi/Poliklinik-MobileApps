@@ -12,6 +12,6 @@
     <color name="Cyan">#57E5CB</color>
     <color name="Green">#57E56E</color>
     <color name="darkblue">#59ACCF</color>
-
+    <color name="btn_details">#57E5CB</color>
 
 </resources>
