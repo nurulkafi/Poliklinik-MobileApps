@@ -1,14 +1,22 @@
 package com.kadazi.poliklinikapps.Model;
 
 public class DataModelResep {
-    private String id,nama,poli,tanggal;
+    private String id,nama,poli,tgl_pendaftaran;
 
-    public String getId() {
-        return id;
+    public String getPoli() {
+        return poli;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPoli(String poli) {
+        this.poli = poli;
+    }
+
+    public String getTgl_pendaftaran() {
+        return tgl_pendaftaran;
+    }
+
+    public void setTgl_pendaftaran(String tgl_pendaftaran) {
+        this.tgl_pendaftaran = tgl_pendaftaran;
     }
 
     public String getNama() {
@@ -19,19 +27,11 @@ public class DataModelResep {
         this.nama = nama;
     }
 
-    public String getPoli() {
-        return poli;
+    public String getId() {
+        return id;
     }
 
-    public void setPoli(String poli) {
-        this.poli = poli;
-    }
-
-    public String getTanggal() {
-        return tanggal;
-    }
-
-    public void setTanggal(String tanggal) {
-        this.tanggal = tanggal;
+    public void setId(String id) {
+        this.id = id;
     }
 }

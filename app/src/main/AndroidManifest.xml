@@ -15,6 +15,9 @@
             android:name=".Activity.MenuActivity"
             android:exported="false" />
         <activity
+            android:name=".Activity.DetailPemeriksaanActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.RiwayatPemeriksaanActivity"
             android:exported="false" />
         <activity
