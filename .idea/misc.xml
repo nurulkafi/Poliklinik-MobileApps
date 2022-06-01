@@ -12,12 +12,16 @@
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_resep.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/login.xml" value="0.17074275362318841" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/padtop.xml" value="0.17074275362318841" />
+        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/drawable-v24/viewdetails.xml" value="0.1865" />
         <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/drawable/button1style.xml" value="0.1865" />
+        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/drawable/edittextstyle.xml" value="0.1865" />
+        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/activity_detail_pemeriksaan.xml" value="0.5" />
         <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/activity_login.xml" value="0.20677083333333332" />
         <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/activity_resep.xml" value="0.20677083333333332" />
-        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/activity_riwayat_pemeriksaan.xml" value="0.20677083333333332" />
-        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/list_resep.xml" value="0.20677083333333332" />
-        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/list_riwayat_pemeriksaan.xml" value="0.20677083333333332" />
+        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/activity_riwayat_pemeriksaan.xml" value="0.25" />
+        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/activity_splash_screen.xml" value="0.20677083333333332" />
+        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/list_resep.xml" value="0.33" />
+        <entry key="..\:/Project_android/Poliklinik-MobileApps-master/app/src/main/res/layout/list_riwayat_pemeriksaan.xml" value="0.33" />
       </map>
     </option>
   </component>

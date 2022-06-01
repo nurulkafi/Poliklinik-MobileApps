@@ -1,5 +1,6 @@
 package com.kadazi.poliklinikapps.Api;
 
+import com.kadazi.poliklinikapps.Model.ResponseModelDetailPemeriksaan;
 import com.kadazi.poliklinikapps.Model.ResponseModelResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelRiwayat;
 
@@ -13,4 +14,6 @@ public interface APIRequestData {
     Call<ResponseModelResep> listResep();
     @GET("riwayat_pemeriksaan/{id}")
     Call<ResponseModelRiwayat> listRiwayat(@Path("id") int id);
+    @GET("detail_pemeriksaan/{id}")
+    Call<ResponseModelDetailPemeriksaan> Detail(@Path("id") int id);
 }
