@@ -9,16 +9,20 @@
         android:id="@+id/TextObat"
         android:layout_width="147dp"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Obat "
-        android:textSize="16sp" />
+        android:textSize="12sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/TextDosis"
         android:layout_width="147dp"
         android:layout_marginStart="23dp"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:text="Dosis "
-        android:textSize="16sp" />
+        android:textSize="12sp"
+        android:textStyle="bold"/>
 
 </LinearLayout>
 
