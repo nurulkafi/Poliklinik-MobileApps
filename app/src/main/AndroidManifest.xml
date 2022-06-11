@@ -13,6 +13,22 @@
         android:theme="@style/Theme.PoliklinikApps">
         <activity
             android:name=".Activity.AntrianActivity"
+            android:name=".Activity.PembayaranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignUpSuccesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignUpPasienActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignUpEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DaftarBaruActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DaftarActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.LaporkanMasalahActivity"

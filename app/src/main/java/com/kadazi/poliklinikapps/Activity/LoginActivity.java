@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kadazi.poliklinikapps.Api.APIRequestData;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_login;
     EditText email;
     EditText password;
+    TextView daftardisini;
     protected Cursor cursor;
     DataHelper dbcenter;
 
@@ -42,6 +44,14 @@ public class LoginActivity extends AppCompatActivity {
             cursor.moveToFirst();
             if(cursor.getCount() < 1){
                 setContentView(R.layout.activity_login);
+                daftardisini = findViewById(R.id.daftardisni);
+                daftardisini.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(LoginActivity.this,SignUpEmailActivity.class);
+                        startActivity(intent);
+                    }
+                });
                 btn_login = findViewById(R.id.button_login);
                 email = findViewById(R.id.email);
                 password = findViewById(R.id.password);
@@ -120,4 +130,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
 }

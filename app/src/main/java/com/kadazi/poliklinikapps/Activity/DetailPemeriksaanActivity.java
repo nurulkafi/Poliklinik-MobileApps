@@ -1,11 +1,14 @@
 package com.kadazi.poliklinikapps.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.R;
 
 public class DetailPemeriksaanActivity extends AppCompatActivity {
@@ -53,6 +56,32 @@ public class DetailPemeriksaanActivity extends AppCompatActivity {
         tindakan.setText(xtindakan);
         bb.setText(xbb+"Kg");
         tensi.setText(xtensi+"mmHg");
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.page_1:
+                        return false;
+                    case R.id.page_2:
+                        startActivity(new Intent(getApplicationContext(),ResepActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_3:
+                        startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_4:
+                        startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                }
+                return false;
+            }
+        });
     }
 
 }

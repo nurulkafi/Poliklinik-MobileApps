@@ -8,6 +8,8 @@ import com.kadazi.poliklinikapps.Model.ResponseModelResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelResepDetails;
 import com.kadazi.poliklinikapps.Model.ResponseModelRiwayat;
 
+import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -36,5 +38,18 @@ public interface APIRequestData {
     Call<ResponseModelResepDetails> DetailS_Resep(@Path("id") int id);
     @GET("antrian_daftar")
     Call<ResponseModelAntrian> ListAntrian();
+
+    @FormUrlEncoded
+    @POST("pasien")
+    Call<ResponseModel> Daftar(
+            @Field("email") String email,
+            @Field("password") String password,
+            @Field("nik") String nik,
+            @Field("nama") String nama,
+            @Field("tgl_lahir") String tgl_lahir,
+            @Field("jk") String jk,
+            @Field("alamat") String alamat,
+            @Field("no_hp") String no_hp
+    );
 
 }

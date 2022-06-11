@@ -30,7 +30,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_resep"
         android:layout_width="312dp"
-        android:layout_height="match_parent"
+        android:layout_height="635dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="66dp"
         android:scrollbars="vertical"
@@ -39,5 +39,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:listitem="@layout/list_resep" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
