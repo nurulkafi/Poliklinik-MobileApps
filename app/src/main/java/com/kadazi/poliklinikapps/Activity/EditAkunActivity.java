@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.kadazi.poliklinikapps.R;
+
 public class EditAkunActivity extends AppCompatActivity {
 
     @Override

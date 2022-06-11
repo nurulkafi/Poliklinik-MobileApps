@@ -3,7 +3,7 @@ package com.kadazi.poliklinikapps.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
+import com.kadazi.poliklinikapps.R;
 public class PengaturanActivity extends AppCompatActivity {
 
     @Override
