@@ -2,6 +2,7 @@ package com.kadazi.poliklinikapps.Api;
 
 
 import com.kadazi.poliklinikapps.Model.ResponseModel;
+import com.kadazi.poliklinikapps.Model.ResponseModelAntrian;
 import com.kadazi.poliklinikapps.Model.ResponseModelDetailPemeriksaan;
 import com.kadazi.poliklinikapps.Model.ResponseModelResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelResepDetails;
@@ -33,5 +34,7 @@ public interface APIRequestData {
     Call<ResponseModelDetailPemeriksaan> Detail(@Path("id") int id);
     @GET("details_resep/{id}")
     Call<ResponseModelResepDetails> DetailS_Resep(@Path("id") int id);
+    @GET("antrian_daftar")
+    Call<ResponseModelAntrian> ListAntrian();
 
 }

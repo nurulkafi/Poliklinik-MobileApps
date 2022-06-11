@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PoliklinikApps">
         <activity
+            android:name=".Activity.AntrianActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.LaporkanMasalahActivity"
             android:exported="false" />
         <activity

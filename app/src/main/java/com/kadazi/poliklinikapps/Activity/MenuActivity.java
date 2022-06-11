@@ -29,7 +29,7 @@ public class MenuActivity extends AppCompatActivity {
                     case R.id.page_1:
                         return true;
                     case R.id.page_2:
-                        startActivity(new Intent(getApplicationContext(),ResepActivity.class));
+                        startActivity(new Intent(getApplicationContext(),AntrianActivity.class));
                         overridePendingTransition(0,0);
                         return false;
                     case R.id.page_3:
