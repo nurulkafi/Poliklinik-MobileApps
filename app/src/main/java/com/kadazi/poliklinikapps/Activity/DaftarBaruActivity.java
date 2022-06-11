@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.R;
 
-public class EditAkunActivity extends AppCompatActivity {
+public class DaftarBaruActivity extends AppCompatActivity {
     private BottomNavigationView ba;
 
     @Override
@@ -31,7 +31,7 @@ public class EditAkunActivity extends AppCompatActivity {
                     case R.id.page_2:
                         startActivity(new Intent(getApplicationContext(),ResepActivity.class));
                         overridePendingTransition(0,0);
-                        return false;
+                        return true;
                     case R.id.page_3:
                         startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
                         overridePendingTransition(0,0);
@@ -39,7 +39,7 @@ public class EditAkunActivity extends AppCompatActivity {
                     case R.id.page_4:
                         startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
                         overridePendingTransition(0,0);
-                        return true;
+                        return false;
                 }
                 return false;
             }
