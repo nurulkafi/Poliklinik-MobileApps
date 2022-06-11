@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Riwayat Pemeriksaan"
+        android:text="Pendaftaran"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -28,17 +28,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_riwayat"
-        android:layout_width="312dp"
-        android:layout_height="555dp"
+        android:id="@+id/list_daftar"
+        android:layout_width="330dp"
+        android:layout_height="580dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="36dp"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:listitem="@layout/list_riwayat_pemeriksaan" />
+        tools:listitem="@layout/list_daftar_baru" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"

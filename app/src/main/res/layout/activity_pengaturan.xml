@@ -50,20 +50,21 @@
         android:layout_marginTop="184dp"
         android:text="Pengaturan"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/EditAkun"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@color/white"
         android:fontFamily="@font/poppins"
         android:gravity="left"
         android:text="Edit Akun"
@@ -73,13 +74,14 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/EditDataPasien"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@color/white"
         android:fontFamily="@font/poppins"
         android:gravity="left"
         android:text="Edit Data Pasien"
@@ -90,13 +92,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditAkun" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/HelpSupport"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@color/white"
         android:fontFamily="@font/poppins"
         android:gravity="left"
         android:text="Help Support"
@@ -107,13 +110,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditDataPasien" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Laporkanmasalah"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@color/white"
         android:fontFamily="@font/poppins"
         android:gravity="left"
         android:text="Laporkan Masalah"
@@ -124,13 +128,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/HelpSupport" />
 
-    <Button
-        android:id="@+id/LogOut"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logout"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:background="@color/white"
         android:fontFamily="@font/poppins"
         android:gravity="left"
         android:text="LogOut"
@@ -141,4 +146,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Laporkanmasalah" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
