@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,9 +28,10 @@ public class SignUpEmailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SignUpEmailActivity.this,SignUpPasienActivity.class);
-                intent.putExtra("email", email.getText());
-                intent.putExtra("password",password.getText());
+                intent.putExtra("email", email.getText().toString());
+                intent.putExtra("password",password.getText().toString());
                 startActivity(intent);
+
             }
         });
 

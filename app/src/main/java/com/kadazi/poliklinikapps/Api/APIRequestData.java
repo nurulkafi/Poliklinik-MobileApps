@@ -35,6 +35,7 @@ public interface APIRequestData {
     Call<ResponseModelDetailPemeriksaan> Detail(@Path("id") int id);
     @GET("details_resep/{id}")
     Call<ResponseModelResepDetails> DetailS_Resep(@Path("id") int id);
+
     @FormUrlEncoded
     @POST("pasien")
     Call<ResponseModel> Daftar(
@@ -46,6 +47,6 @@ public interface APIRequestData {
             @Field("jk") String jk,
             @Field("alamat") String alamat,
             @Field("no_hp") String no_hp
-            );
+    );
 
 }

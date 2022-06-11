@@ -35,17 +35,18 @@ public class SignUpPasienActivity extends AppCompatActivity {
         jk = findViewById(R.id.jk);
         no_hp = findViewById(R.id.no_hp);
         daftar = findViewById(R.id.daftar);
+        String email = getIntent().getStringExtra("email");
+        String password = getIntent().getStringExtra("password");
         daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                daftars();
+                daftars(email,password);
             }
         });
 
     }
-    public void daftars(){
-        String email = getIntent().getStringExtra("email");
-        String password = getIntent().getStringExtra("password");
+    public void daftars(String email,String password){
+
         String niks = nik.getText().toString();
         String namas = nama.getText().toString();
         String tgl_lahirs = tgl_lahir.getText().toString();
