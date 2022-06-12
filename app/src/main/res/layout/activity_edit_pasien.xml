@@ -22,6 +22,7 @@
         android:layout_marginTop="28dp"
         android:text="Edit Pasien"
         android:textColor="@color/white"
+        android:fontFamily="@font/poppins"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Nama"
+        android:id="@+id/nama"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
@@ -42,10 +43,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NIK" />
+        app:layout_constraintTop_toBottomOf="@+id/nik" />
 
     <EditText
-        android:id="@+id/NIK"
+        android:id="@+id/nik"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
@@ -61,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/TTL"
+        android:id="@+id/tgl_lahir"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
@@ -74,10 +75,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nama" />
+        app:layout_constraintTop_toBottomOf="@+id/nama" />
 
     <EditText
-        android:id="@+id/JenisKelamin"
+        android:id="@+id/jk"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
@@ -90,10 +91,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TTL" />
+        app:layout_constraintTop_toBottomOf="@+id/tgl_lahir" />
 
     <EditText
-        android:id="@+id/Alamat"
+        android:id="@+id/alamat"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
@@ -106,10 +107,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/JenisKelamin" />
+        app:layout_constraintTop_toBottomOf="@+id/jk" />
 
     <EditText
-        android:id="@+id/Notlp"
+        android:id="@+id/no_hp"
         android:layout_width="312dp"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
@@ -122,10 +123,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Alamat" />
+        app:layout_constraintTop_toBottomOf="@+id/alamat" />
 
     <Button
-        android:id="@+id/Submit"
+        android:id="@+id/submit"
         android:layout_width="312dp"
         android:layout_height="37dp"
         android:layout_marginStart="24dp"
@@ -138,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Notlp"
+        app:layout_constraintTop_toBottomOf="@+id/no_hp"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

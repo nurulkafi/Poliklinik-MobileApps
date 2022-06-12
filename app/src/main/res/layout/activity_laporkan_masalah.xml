@@ -22,6 +22,7 @@
         android:layout_marginTop="28dp"
         android:text="Laporkan Masalah"
         android:textColor="@color/white"
+        android:fontFamily="@font/poppins"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Laporkanmasalah"
+        android:id="@+id/laporkanmasalah"
         android:layout_width="312dp"
         android:layout_height="292dp"
         android:layout_marginStart="24dp"
@@ -45,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
-        android:id="@+id/Submit"
+        android:id="@+id/submit"
         android:layout_width="312dp"
         android:layout_height="37dp"
         android:layout_marginStart="24dp"
@@ -58,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Laporkanmasalah" />
+        app:layout_constraintTop_toBottomOf="@+id/laporkanmasalah" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
