@@ -4,6 +4,8 @@ package com.kadazi.poliklinikapps.Api;
 import com.kadazi.poliklinikapps.Model.ResponseModel;
 import com.kadazi.poliklinikapps.Model.ResponseModelAntrian;
 import com.kadazi.poliklinikapps.Model.ResponseModelDetailPemeriksaan;
+import com.kadazi.poliklinikapps.Model.ResponseModelPendaftaran;
+import com.kadazi.poliklinikapps.Model.ResponseModelPendaftaranBaru;
 import com.kadazi.poliklinikapps.Model.ResponseModelResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelResepDetails;
 import com.kadazi.poliklinikapps.Model.ResponseModelRiwayat;
@@ -11,6 +13,7 @@ import com.kadazi.poliklinikapps.Model.ResponseModelRiwayat;
 import java.util.Date;
 
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -38,6 +41,10 @@ public interface APIRequestData {
     Call<ResponseModelResepDetails> DetailS_Resep(@Path("id") int id);
     @GET("antrian_daftar")
     Call<ResponseModelAntrian> ListAntrian();
+    @GET("daftar/{id}")
+    Call<ResponseModelPendaftaran> ListDaftar(@Path("id") int id);
+    @GET("daftar_baru/{id}")
+    Call<ResponseModelPendaftaranBaru> ListDaftarBaru(@Path("id") int id);
 
     @FormUrlEncoded
     @POST("pasien")
