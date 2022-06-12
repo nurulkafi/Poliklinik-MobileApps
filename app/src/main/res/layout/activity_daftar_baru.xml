@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_daftar"
+        android:id="@+id/list_daftar_baru"
         android:layout_width="330dp"
         android:layout_height="580dp"
         android:layout_centerInParent="true"
