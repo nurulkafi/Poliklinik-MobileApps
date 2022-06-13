@@ -43,8 +43,18 @@ public interface APIRequestData {
     Call<ResponseModelAntrian> ListAntrian();
     @GET("daftar/{id}")
     Call<ResponseModelPendaftaran> ListDaftar(@Path("id") int id);
-    @GET("daftar_baru/{id}")
-    Call<ResponseModelPendaftaranBaru> ListDaftarBaru(@Path("id") int id);
+    @GET("daftar_baru")
+    Call<ResponseModelPendaftaranBaru> ListDaftarBaru();
+
+    @DELETE("hapus_daftar/{id}")
+    Call<ResponseModel> HapusDaftar(@Path("id") int id);
+
+    @FormUrlEncoded
+    @POST("pendaftaran")
+    Call<ResponseModel> Pendaftaran(
+            @Field("jadwal_dokter") String id_jadwal,
+            @Field("no_pasien") int no_pasien
+    );
 
     @FormUrlEncoded
     @POST("pasien")
