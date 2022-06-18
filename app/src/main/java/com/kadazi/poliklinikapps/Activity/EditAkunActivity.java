@@ -16,7 +16,7 @@ public class EditAkunActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_edit_akun);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
@@ -27,6 +27,7 @@ public class EditAkunActivity extends AppCompatActivity {
                 switch(item.getItemId())
                 {
                     case R.id.page_1:
+                        overridePendingTransition(0,0);
                         return false;
                     case R.id.page_2:
                         startActivity(new Intent(getApplicationContext(),ResepActivity.class));
@@ -38,7 +39,6 @@ public class EditAkunActivity extends AppCompatActivity {
                         return false;
                     case R.id.page_4:
                         startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
-                        overridePendingTransition(0,0);
                         return true;
                 }
                 return false;

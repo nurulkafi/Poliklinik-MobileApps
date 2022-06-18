@@ -16,7 +16,7 @@ public class LaporkanMasalahActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_laporkan_masalah);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
