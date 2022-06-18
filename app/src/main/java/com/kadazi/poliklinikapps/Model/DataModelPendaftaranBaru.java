@@ -1,7 +1,15 @@
 package com.kadazi.poliklinikapps.Model;
 
 public class DataModelPendaftaranBaru {
-    private String dokter,nama_poli,jam_mulai,jam_selesai;
+    private String id,dokter,nama_poli,jam_mulai,jam_selesai;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getDokter() {
         return dokter;

@@ -48,7 +48,7 @@ public class DaftarBaruActivity extends AppCompatActivity {
 
     public void tampilData() {
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ResponseModelPendaftaranBaru> tampilData = arData.ListDaftarBaru(2);
+        Call<ResponseModelPendaftaranBaru> tampilData = arData.ListDaftarBaru();
 
         tampilData.enqueue(new Callback<ResponseModelPendaftaranBaru>() {
             @Override
