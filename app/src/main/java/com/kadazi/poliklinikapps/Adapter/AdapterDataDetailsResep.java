@@ -4,11 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.kadazi.poliklinikapps.Model.DataModelResep;
 import com.kadazi.poliklinikapps.Model.DataModelResepDetails;
 import com.kadazi.poliklinikapps.R;
 
@@ -53,7 +55,7 @@ public class AdapterDataDetailsResep extends RecyclerView.Adapter<AdapterDataDet
         public HolderDetailsResep(@NonNull View itemView) {
             super(itemView);
             obat = itemView.findViewById(R.id.TextObat);
-            dosis = itemView.findViewById(R.id.ObatHarga);
+            dosis = itemView.findViewById(R.id.TextDosis);
 
         }
 

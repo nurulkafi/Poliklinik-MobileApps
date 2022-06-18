@@ -85,7 +85,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/no_rek"
+                    android:id="@+id/resep_nama_poliklinik"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"

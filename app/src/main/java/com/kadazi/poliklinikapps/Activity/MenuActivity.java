@@ -6,48 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.R;
 
 public class MenuActivity extends AppCompatActivity {
     private BottomNavigationView ba;
-    private LinearLayout jad;
-    private ImageButton jadwal,pembayaran;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        jadwal = findViewById(R.id.btn_jadwal);
-        pembayaran = findViewById(R.id.btn_pembayaran);
-        jad = findViewById(R.id.btn_jad);
-        //Jadwal Dokter
-        jad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),JadwalPraktekActivity.class);
-                startActivity(intent);
-            }
-        });
-        jadwal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),JadwalPraktekActivity.class);
-                startActivity(intent);
-            }
-        });
-        pembayaran.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),PembayaranActivity.class);
-                startActivity(intent);
-            }
-        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 

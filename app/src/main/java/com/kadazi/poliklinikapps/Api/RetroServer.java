@@ -7,7 +7,6 @@ public class RetroServer {
 
     private static final String baseURL ="http://192.168.137.1/poliklinik/public/api/";
 
-
     private static Retrofit retro;
 
     public static Retrofit konekRetrofit(){

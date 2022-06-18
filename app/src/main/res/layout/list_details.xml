@@ -15,7 +15,7 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/ObatHarga"
+        android:id="@+id/TextDosis"
         android:layout_width="147dp"
         android:layout_marginStart="23dp"
         android:textColor="@color/black"

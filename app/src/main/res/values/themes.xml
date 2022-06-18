@@ -2,8 +2,6 @@
     <!-- Base application theme. -->
     <style name="Theme.PoliklinikApps" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="android:textViewStyle">@font/poppins</item>
-        <item name="android:buttonStyle">@font/poppins</item>
         <item name="colorPrimary">@color/Blue</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
