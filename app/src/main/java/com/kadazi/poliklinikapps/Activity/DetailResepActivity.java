@@ -13,9 +13,11 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataDetailsResep;
+import com.kadazi.poliklinikapps.Adapter.AdapterDataPembayaranResep;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataResep;
 import com.kadazi.poliklinikapps.Api.APIRequestData;
 import com.kadazi.poliklinikapps.Api.RetroServer;
+import com.kadazi.poliklinikapps.Model.DataModelPembayaranResep;
 import com.kadazi.poliklinikapps.Model.DataModelResep;
 import com.kadazi.poliklinikapps.Model.DataModelResepDetails;
 import com.kadazi.poliklinikapps.Model.ResponseModelResepDetails;

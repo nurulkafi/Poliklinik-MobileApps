@@ -12,8 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PoliklinikApps">
         <activity
-            android:name=".Activity.AntrianActivity"
+            android:name=".Activity.UploadBuktiPembayaranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MediaPembayaranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetailPembayaran"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetailJadwalDokter"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.JadwalPraktekActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.PembayaranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AntrianActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.SignUpSuccesActivity"
