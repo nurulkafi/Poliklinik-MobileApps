@@ -3,25 +3,51 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable-v24/bgdetails.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable-v24/padcenter.xml" value="0.17074275362318841" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable-v24/padtop.xml" value="0.1045" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable-v24/viewdetails.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/background_biruhijau.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/background_birulangit.xml" value="0.1045" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/background_grey.xml" value="0.1045" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/background_grey2.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/background_merah.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/button1style.xml" value="0.197" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/circlebackground.xml" value="0.1045" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/circlebackgroundungu.xml" value="0.197" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/edittextstyle.xml" value="0.197" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.1045" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.197" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/ic_baseline_playlist_add_24.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/selector.xml" value="0.1045" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/drawable/user.xml" value="0.1045" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_detail_jadwal_dokter.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_detail_pembayaran.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_detail_pemeriksaan.xml" value="0.14" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_edit_akun.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_jadwal_praktek.xml" value="0.14" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_menu.xml" value="0.22" />
-        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_pembayaran.xml" value="0.17074275362318841" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_media_pembayaran.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_menu.xml" value="0.3242258652094718" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_pembayaran.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_pengaturan.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_resep.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_sign_up_succes.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_splash_screen.xml" value="0.16" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/activity_upload_bukti_pembayaran.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/contoh.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/details_resep.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_data_obat.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_detail_biaya.xml" value="0.1900352733686067" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_details.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_jadwal_dokter.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_media_pembayaran.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_pembayaran.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_poli.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_resep.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_riwayat_pemeriksaan.xml" value="0.17074275362318841" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/list_test.xml" value="0.5" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/login.xml" value="0.17074275362318841" />
         <entry key="..\:/AndroidStudioProjects/PoliklinikApps/app/src/main/res/layout/padtop.xml" value="0.17074275362318841" />
