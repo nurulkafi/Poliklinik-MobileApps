@@ -18,27 +18,39 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
         android:text="Riwayat Pemeriksaan"
         android:textColor="@color/white"
         android:textSize="20dp"
+        android:fontFamily="@font/poppins_bold"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlData"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_riwayat"
-        android:layout_width="312dp"
-        android:layout_height="555dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:layout_centerInParent="true"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="24dp"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:listitem="@layout/list_riwayat_pemeriksaan" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -51,5 +63,14 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         />
-
+    <ImageButton
+        android:id="@+id/back_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="48dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

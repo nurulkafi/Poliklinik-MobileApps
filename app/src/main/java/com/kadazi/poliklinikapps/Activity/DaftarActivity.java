@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataAntrian;
@@ -32,6 +34,8 @@ import retrofit2.Response;
 
 public class DaftarActivity extends AppCompatActivity {
     private BottomNavigationView ba;
+    private ImageButton back;
+    private SwipeRefreshLayout srlData;
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
@@ -42,6 +46,7 @@ public class DaftarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar);
 
+        srlData = findViewById(R.id.srlData);
         Button button= (Button) findViewById(R.id.daftar_baru);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -52,6 +57,14 @@ public class DaftarActivity extends AppCompatActivity {
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
         tampilData();
+        srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlData.setRefreshing(true);
+                tampilData();
+                srlData.setRefreshing(false);
+            }
+        });
     }
 
     public void tampilData() {
@@ -88,7 +101,7 @@ public class DaftarActivity extends AppCompatActivity {
                     case R.id.page_1:
                         return false;
                     case R.id.page_2:
-                        startActivity(new Intent(getApplicationContext(), ResepActivity.class));
+                        startActivity(new Intent(getApplicationContext(), AntrianActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.page_3:
@@ -101,6 +114,13 @@ public class DaftarActivity extends AppCompatActivity {
                         return false;
                 }
                 return false;
+            }
+        });
+        back = findViewById(R.id.back_daftar);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

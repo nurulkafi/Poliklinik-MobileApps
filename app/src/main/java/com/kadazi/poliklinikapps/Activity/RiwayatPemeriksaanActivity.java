@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataRiwayat;
@@ -27,16 +30,28 @@ import retrofit2.Response;
 
 public class RiwayatPemeriksaanActivity extends AppCompatActivity {
     private RecyclerView rvData;
+    private ImageButton back;
+    private SwipeRefreshLayout srlData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
     private List<DataModelRiwayat> listData = new ArrayList<>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riwayat_pemeriksaan);
+
+        srlData = findViewById(R.id.srlData);
         rvData = findViewById(R.id.list_riwayat);
         lmData = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         rvData.setLayoutManager(lmData);
         tampilData();
+        srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlData.setRefreshing(true);
+                tampilData();
+                srlData.setRefreshing(false);
+            }
+        });
     }
     public void tampilData(){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
@@ -64,7 +79,7 @@ public class RiwayatPemeriksaanActivity extends AppCompatActivity {
                             case R.id.page_1:
                                 return false;
                             case R.id.page_2:
-                                startActivity(new Intent(getApplicationContext(),ResepActivity.class));
+                                startActivity(new Intent(getApplicationContext(),AntrianActivity.class));
                                 overridePendingTransition(0,0);
                                 return false;
                             case R.id.page_3:
@@ -85,6 +100,13 @@ public class RiwayatPemeriksaanActivity extends AppCompatActivity {
             public void onFailure(Call<ResponseModelRiwayat> call, Throwable t){
                 Log.d("ggl",t.getMessage());
 
+            }
+        });
+        back = findViewById(R.id.back_riwayat);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
