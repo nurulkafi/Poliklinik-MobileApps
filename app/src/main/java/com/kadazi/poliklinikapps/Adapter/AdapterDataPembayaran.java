@@ -2,6 +2,7 @@ package com.kadazi.poliklinikapps.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,10 +47,13 @@ public class AdapterDataPembayaran extends RecyclerView.Adapter<AdapterDataPemba
         if(dm.getStatus().equals("Belum Bayar")){
             holder.status.setBackgroundResource(R.drawable.background_merah);
             holder.btn.setText("Bayar");
+            holder.btn.setBackgroundResource(R.drawable.background_birulangit);
             holder.status.setPadding(10,10,10,10);
         }else {
             holder.status.setBackgroundResource(R.drawable.background_birulangit);
             holder.status.setPadding(10,10,10,10);
+            holder.btn.setTextColor(Color.parseColor("#575CE5"));
+            holder.btn.setBackgroundResource(R.drawable.background_grey3);
             holder.btn.setText("Detail");
         }
         holder.btn.setOnClickListener(new View.OnClickListener() {
