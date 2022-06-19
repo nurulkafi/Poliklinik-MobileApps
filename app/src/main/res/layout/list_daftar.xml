@@ -43,13 +43,14 @@
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:id="@+id/resep_nama_dokter"
+                    android:id="@+id/daftar_dokter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="200dp"
                     android:layout_margin="5dp"
+                    android:layout_marginLeft="200dp"
                     android:text="Dokter "
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -81,7 +82,7 @@
                     android:textSize="12sp"
                     android:textStyle="bold" />
                 <TextView
-                    android:id="@+id/no_rek"
+                    android:id="@+id/daftar_nama_poli"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
@@ -119,7 +120,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/resep_nama_tgl"
+                    android:id="@+id/daftar_tgl_pendaftaran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
@@ -156,7 +157,7 @@
                     android:textSize="12sp"
                     android:textStyle="bold" />
                 <TextView
-                    android:id="@+id/status_pemeriksaan"
+                    android:id="@+id/status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
@@ -175,21 +176,11 @@
         android:layout_marginTop="125dp"
         android:orientation="horizontal">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="80dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/button3style"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/white"
-        android:text="Edit"
-        android:id="@+id/daftar_btn_Edit"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="80dp"
         android:layout_height="41dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="110dp"
         android:layout_marginTop="120dp"
         android:background="@drawable/button4style"
         android:layout_gravity="center_horizontal"

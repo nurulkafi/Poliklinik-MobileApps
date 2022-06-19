@@ -30,7 +30,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_daftar"
         android:layout_width="330dp"
-        android:layout_height="510dp"
+        android:layout_height="400dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="36dp"
         android:scrollbars="vertical"
@@ -41,7 +41,7 @@
         tools:listitem="@layout/list_daftar" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/daftar_baru"
         android:layout_width="312dp"
         android:layout_height="37dp"
         android:layout_marginStart="24dp"

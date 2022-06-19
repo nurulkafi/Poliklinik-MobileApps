@@ -27,6 +27,9 @@
             android:name=".Activity.JadwalPraktekActivity"
             android:exported="false" />
         <activity
+            android:name=".Activity.AntrianActivity"
+            android:exported="false"/>
+            <activity
             android:name=".Activity.PembayaranActivity"
             android:exported="false" />
         <activity

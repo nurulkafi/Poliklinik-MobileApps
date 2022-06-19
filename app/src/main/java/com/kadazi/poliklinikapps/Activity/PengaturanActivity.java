@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.R;
@@ -16,7 +17,7 @@ import com.kadazi.poliklinikapps.SQLite.DataHelper;
 
 public class PengaturanActivity extends AppCompatActivity {
     private BottomNavigationView ba;
-    Button logout;
+    TextView logout,editakun,laporkanmasalah,editdatapasien,helpsupport;
 
     DataHelper dbcenter;
 
@@ -26,6 +27,12 @@ public class PengaturanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pengaturan);
         dbcenter = new DataHelper(this);
         logout = findViewById(R.id.logout);
+        editakun = findViewById(R.id.editakun);
+        editdatapasien = findViewById(R.id.editdatapasien);
+        helpsupport = findViewById(R.id.helpsupport);
+        laporkanmasalah = findViewById(R.id.laporkanmasalah);
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
@@ -48,12 +55,12 @@ public class PengaturanActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return false;
                     case R.id.page_4:
-
                         return true;
                 }
                 return false;
             }
         });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +70,40 @@ public class PengaturanActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
+        editdatapasien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PengaturanActivity.this,EditPasienActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        editakun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PengaturanActivity.this,EditAkunActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        helpsupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PengaturanActivity.this,HelpSupportActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        laporkanmasalah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PengaturanActivity.this,LaporkanMasalahActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
 
 }

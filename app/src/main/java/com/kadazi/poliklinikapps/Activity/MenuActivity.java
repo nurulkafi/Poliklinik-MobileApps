@@ -64,7 +64,7 @@ public class MenuActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return false;
                     case R.id.page_3:
-                        startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
+                        startActivity(new Intent(getApplicationContext(),DaftarActivity.class));
                         overridePendingTransition(0,0);
                         return false;
                     case R.id.page_4:

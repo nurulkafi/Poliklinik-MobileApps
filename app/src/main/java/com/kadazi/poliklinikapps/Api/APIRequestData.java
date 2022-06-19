@@ -10,6 +10,8 @@ import com.kadazi.poliklinikapps.Model.ResponseModelPembayaran;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaranBiaya;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaranResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelPoli;
+import com.kadazi.poliklinikapps.Model.ResponseModelPendaftaran;
+import com.kadazi.poliklinikapps.Model.ResponseModelPendaftaranBaru;
 import com.kadazi.poliklinikapps.Model.ResponseModelResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelResepDetails;
 import com.kadazi.poliklinikapps.Model.ResponseModelRiwayat;
@@ -19,6 +21,7 @@ import java.util.Date;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -60,6 +63,21 @@ public interface APIRequestData {
     Call<ResponseModelPembayaranBiaya> pembayaran_biaya(@Path("id") String id);
     @GET("media_pembayaran")
     Call<ResponseModelMediaPembayaran> media_pembayaran();
+    @GET("daftar/{id}")
+    Call<ResponseModelPendaftaran> ListDaftar(@Path("id") int id);
+    @GET("daftar_baru")
+    Call<ResponseModelPendaftaranBaru> ListDaftarBaru();
+
+    @DELETE("hapus_daftar/{id}")
+    Call<ResponseModel> HapusDaftar(@Path("id") int id);
+
+    @FormUrlEncoded
+    @POST("pendaftaran")
+    Call<ResponseModel> Pendaftaran(
+            @Field("jadwal_dokter") String id_jadwal,
+            @Field("no_pasien") int no_pasien
+    );
+
     @FormUrlEncoded
     @POST("pasien")
     Call<ResponseModel> Daftar(
