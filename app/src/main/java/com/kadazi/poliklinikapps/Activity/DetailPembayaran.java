@@ -1,5 +1,6 @@
 package com.kadazi.poliklinikapps.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,10 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataJadwal;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataPembayaranBiaya;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataPembayaranResep;
@@ -73,6 +77,41 @@ public class DetailPembayaran extends AppCompatActivity {
         }else{
             bayar.setVisibility(View.GONE);
         }
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.page_1:
+                        startActivity(new Intent(getApplicationContext(),MenuActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_2:
+                        startActivity(new Intent(getApplicationContext(),AntrianActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_3:
+                        startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_4:
+                        startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                }
+                return false;
+            }
+        });
+        ImageButton btn = findViewById(R.id.btn_kembali);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
     public void tampildataresep(String id_pendaftaran){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);

@@ -16,7 +16,7 @@ public class DataHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "create table login(id integer primary key, email text, password text,pasien_id text);";
+        String sql = "create table login(id integer primary key, email text ,password text,pasien_id text);";
         db.execSQL(sql);
         Log.d("Data2", "onCreate: " + sql);
 

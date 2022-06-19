@@ -40,6 +40,7 @@ public class AdapterDataPembayaran extends RecyclerView.Adapter<AdapterDataPemba
     @Override
     public void onBindViewHolder(@NonNull AdapterDataPembayaran.Holder holder, int position) {
         DataModelPembayaran dm = list.get(position);
+
         holder.id.setText(dm.getId_pendaftran());
         holder.tanggal_pendaftaran.setText(dm.getTanggal_pendaftaran());
         holder.total_pembayaran.setText("Rp. " + dm.getTotal_pembayaran());

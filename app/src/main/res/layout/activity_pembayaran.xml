@@ -30,6 +30,54 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pembayaran_kosong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:foregroundGravity="center_horizontal"
+        android:visibility="visible"
+        app:cardCornerRadius="10dp"
+        app:contentPaddingTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/robot" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="20dp"
+                android:text="Belum Ada Pembayaran"
+
+                android:textAlignment="center"
+                android:textColor="@color/Blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/srlData"
         android:layout_width="match_parent"
@@ -44,13 +92,6 @@
             android:id="@+id/list_media_pembayaran"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-            android:layout_marginTop="16dp"
-            android:scrollbars="none"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
             tools:listitem="@layout/list_pembayaran" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -68,7 +109,7 @@
         />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_kembali"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
