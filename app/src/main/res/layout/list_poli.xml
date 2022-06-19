@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grid_view_items"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:paddingBottom="20dp"
+    android:layout_marginTop="20dp"
+    >
+
+        <ImageButton
+            android:id="@+id/poli_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circlebackgroundungu"
+            android:src="@drawable/jadwallogo"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/poli_nama"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+</LinearLayout>

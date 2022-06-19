@@ -73,7 +73,7 @@ public class AdapterDataResep extends RecyclerView.Adapter<AdapterDataResep.Hold
         public HolderDataResep(@NonNull View itemView) {
             super(itemView);
             nama_dokter = itemView.findViewById(R.id.resep_nama_dokter);
-            nama_poliklinik = itemView.findViewById(R.id.resep_nama_poliklinik);
+            nama_poliklinik = itemView.findViewById(R.id.no_rek);
             tgl = itemView.findViewById(R.id.resep_nama_tgl);
             btn = itemView.findViewById(R.id.resep_btn_details);
         }
