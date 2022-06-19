@@ -3,6 +3,7 @@ package com.kadazi.poliklinikapps.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +27,7 @@ public class PembayaranActivity extends AppCompatActivity {
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
     private List<DataModelPembayaran> data = new ArrayList<>();
+    private SwipeRefreshLayout srlData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,16 @@ public class PembayaranActivity extends AppCompatActivity {
         rvData = findViewById(R.id.list_media_pembayaran);
         lmData = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         rvData.setLayoutManager(lmData);
+        srlData = findViewById(R.id.srlData);
         tampilData("1");
+        srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlData.setRefreshing(true);
+                tampilData("1");
+                srlData.setRefreshing(false);
+            }
+        });
     }
     public void tampilData(String id_pasien){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);

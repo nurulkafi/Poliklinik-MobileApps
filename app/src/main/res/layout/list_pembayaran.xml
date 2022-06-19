@@ -39,27 +39,32 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
+                        android:fontFamily="@font/poppins_semibold"
                         android:text="No Pendaftaran"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text=":"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/no_pendaftraan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:layout_marginLeft="100dp"
                         android:layout_margin="5dp"
+                        android:layout_marginLeft="100dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Dokter "
                         android:textColor="@color/white"
                         android:textSize="12sp"
@@ -78,16 +83,19 @@
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_semibold"
                         android:text="Tanggal Pendaftaran"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text=":"
                         android:textColor="@color/white"
                         android:textSize="12sp"
@@ -100,6 +108,7 @@
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Nama Poliklinik"
                         android:textColor="@color/white"
                         android:textSize="12sp"
@@ -118,20 +127,24 @@
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_semibold"
                         android:text="Total Pembayaran"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text=":"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/total"
                         android:layout_width="wrap_content"
@@ -139,6 +152,7 @@
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Tanggal Pemeriksaan"
                         android:textColor="@color/white"
                         android:textSize="12sp"
@@ -156,20 +170,24 @@
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_semibold"
                         android:text="Status Pembayaran"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text=":"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/status_pembayaran"
                         android:layout_width="wrap_content"
@@ -177,6 +195,7 @@
                         android:layout_gravity="left"
                         android:layout_margin="5dp"
                         android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
                         android:text="Tanggal Pemeriksaan"
                         android:textColor="@color/white"
                         android:textSize="12sp"
@@ -184,18 +203,19 @@
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_pem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Detail"
-            android:fontFamily="@font/poppins_semibold"
-            android:padding="5dp"
+            android:background="@drawable/background_biruhijau"
+            android:fontFamily="@font/poppins"
             android:gravity="center"
-            android:textSize="16dp"
+            android:padding="5dp"
+            android:text="Detail"
             android:textColor="@color/white"
-            android:background="@drawable/background_biruhijau">
+            android:textSize="16dp">
 
         </androidx.appcompat.widget.AppCompatButton>
     </LinearLayout>
