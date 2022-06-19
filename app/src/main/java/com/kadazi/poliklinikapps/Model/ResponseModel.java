@@ -4,6 +4,7 @@ public class ResponseModel {
     private boolean success;
     private String message;
     private String id;
+    private String pasiend_id;
 
     public boolean isSuccess() {
         return success;
@@ -27,5 +28,13 @@ public class ResponseModel {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getPasiend_id() {
+        return pasiend_id;
+    }
+
+    public void setPasiend_id(String pasiend_id) {
+        this.pasiend_id = pasiend_id;
     }
 }

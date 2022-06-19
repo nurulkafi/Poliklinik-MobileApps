@@ -1,5 +1,6 @@
 package com.kadazi.poliklinikapps.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,12 +12,15 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.Api.APIRequestData;
 import com.kadazi.poliklinikapps.Api.RetroServer;
 import com.kadazi.poliklinikapps.Model.ResponseModel;
@@ -57,12 +61,44 @@ public class UploadBuktiPembayaranActivity extends AppCompatActivity {
                     case R.id.choseBTN:
                         selectImage();
                         break;
-
-
                 }
             }
         });
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.page_1:
+                        startActivity(new Intent(getApplicationContext(),MenuActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_2:
+                        startActivity(new Intent(getApplicationContext(),AntrianActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_3:
+                        startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_4:
+                        startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                }
+                return false;
+            }
+        });
+        ImageButton btn = findViewById(R.id.btn_kembali);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
@@ -93,7 +129,8 @@ public class UploadBuktiPembayaranActivity extends AppCompatActivity {
                         String pesan = response.body().getMessage();
 
                         Toast.makeText(UploadBuktiPembayaranActivity.this,"Pesan : "+pesan, Toast.LENGTH_LONG).show();
-
+                        Intent intent = new Intent(UploadBuktiPembayaranActivity.this,PembayaranActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override
