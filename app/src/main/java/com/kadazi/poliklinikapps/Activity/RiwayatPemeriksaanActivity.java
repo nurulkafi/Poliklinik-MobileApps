@@ -2,11 +2,14 @@ package com.kadazi.poliklinikapps.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -20,6 +23,7 @@ import com.kadazi.poliklinikapps.Api.RetroServer;
 import com.kadazi.poliklinikapps.Model.DataModelRiwayat;
 import com.kadazi.poliklinikapps.Model.ResponseModelRiwayat;
 import com.kadazi.poliklinikapps.R;
+import com.kadazi.poliklinikapps.SQLite.DataHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +39,9 @@ public class RiwayatPemeriksaanActivity extends AppCompatActivity {
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
     private List<DataModelRiwayat> listData = new ArrayList<>();
+    private CardView cr;
+    protected Cursor cursor;
+    DataHelper dbcenter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_riwayat_pemeriksaan);
@@ -43,19 +50,25 @@ public class RiwayatPemeriksaanActivity extends AppCompatActivity {
         rvData = findViewById(R.id.list_riwayat);
         lmData = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         rvData.setLayoutManager(lmData);
-        tampilData();
+        dbcenter = new DataHelper(this);
+        SQLiteDatabase db = dbcenter.getReadableDatabase();
+        cursor = db.rawQuery("SELECT * FROM login LIMIT 1", null);
+        cursor.moveToFirst();
+        cursor.moveToPosition(0);
+        String pasien_id = cursor.getString(3).toString();
+        tampilData(pasien_id);
         srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 srlData.setRefreshing(true);
-                tampilData();
+                tampilData(pasien_id);
                 srlData.setRefreshing(false);
             }
         });
     }
-    public void tampilData(){
+    public void tampilData(String id_pasien){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ResponseModelRiwayat> tampilData = arData.listRiwayat(1);
+        Call<ResponseModelRiwayat> tampilData = arData.listRiwayat(id_pasien);
 
         tampilData.enqueue(new Callback<ResponseModelRiwayat>() {
             @Override
