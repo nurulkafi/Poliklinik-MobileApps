@@ -56,7 +56,7 @@ public class PembayaranActivity extends AppCompatActivity {
         cursor.moveToFirst();
         cursor.moveToPosition(0);
         String pasien_id = cursor.getString(3).toString();
-        tampilData(pasien_id);
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
@@ -103,6 +103,8 @@ public class PembayaranActivity extends AppCompatActivity {
             }
         });
         cr = findViewById(R.id.pembayaran_kosong);
+        cr.setVisibility(View.GONE);
+        tampilData(pasien_id);
     }
     public void tampilData(String id_pasien){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
@@ -123,7 +125,6 @@ public class PembayaranActivity extends AppCompatActivity {
                     rvData.setAdapter(adData);
                     adData.notifyDataSetChanged();
                 }
-
 
             }
 

@@ -92,6 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/imageView"
                     android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_bold"
                     android:text="Chose Images" />
 
                 <Button
@@ -100,6 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/choseBTN"
                     android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_bold"
                     android:text="Submit Images" />
             </RelativeLayout>
         </ScrollView>

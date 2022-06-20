@@ -34,27 +34,32 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
+                    android:fontFamily="@font/poppins_bold"
                     android:text="Hari"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text=":"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/hari"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="100dp"
                     android:layout_margin="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Dokter "
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -73,16 +78,19 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_bold"
                     android:text="Jam Praktek "
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text=":"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -95,6 +103,7 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Nama Poliklinik"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -113,20 +122,24 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_bold"
                     android:text="Dokter "
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text=":"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/dokter"
                     android:layout_width="wrap_content"
@@ -134,6 +147,7 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Tanggal Pemeriksaan"
                     android:textColor="@color/white"
                     android:textSize="12sp"
