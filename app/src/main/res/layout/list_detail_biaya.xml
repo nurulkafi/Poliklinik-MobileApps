@@ -10,6 +10,7 @@
         android:id="@+id/BiayaNama"
         android:layout_width="147dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:text="Obat "
         android:textColor="@color/white"
         android:textSize="12sp"
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
 
+        android:fontFamily="@font/poppins"
         android:text="Dosis "
         android:textColor="@color/white"
         android:textSize="12sp"
