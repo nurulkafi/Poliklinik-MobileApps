@@ -17,7 +17,7 @@ import com.kadazi.poliklinikapps.R;
 public class MenuActivity extends AppCompatActivity {
     private BottomNavigationView ba;
     private LinearLayout jad;
-    private ImageButton jadwal,pembayaran;
+    private ImageButton jadwal,pembayaran,resep,antrian,riwayat,pendaftaran;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,12 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         jadwal = findViewById(R.id.btn_jadwal);
         pembayaran = findViewById(R.id.btn_pembayaran);
+        resep = findViewById(R.id.resep);
         jad = findViewById(R.id.btn_jad);
+        antrian = findViewById(R.id.btn_antrian);
+        riwayat = findViewById(R.id.btn_riwayat);
+        pendaftaran = findViewById(R.id.btn_daftar);
+
         //Jadwal Dokter
         jad.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +53,35 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        resep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),ResepActivity.class);
+                startActivity(intent);
+            }
+        });
+        antrian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AntrianActivity.class);
+                startActivity(intent);
+            }
+        });
+        riwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class);
+                startActivity(intent);
+            }
+        });
+        pendaftaran.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),DaftarActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
