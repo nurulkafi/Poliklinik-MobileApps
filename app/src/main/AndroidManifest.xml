@@ -21,6 +21,9 @@
             android:name=".Activity.MediaPembayaranActivity"
             android:exported="false" />
         <activity
+            android:name=".Activity.DetailResepActivity"
+            android:exported="false"/>
+        <activity
             android:name=".Activity.DetailPembayaran"
             android:exported="false" />
         <activity

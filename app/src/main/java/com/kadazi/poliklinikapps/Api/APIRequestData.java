@@ -43,7 +43,7 @@ public interface APIRequestData {
     );
 
     @GET("resep/{id}")
-    Call<ResponseModelResep> listResep(@Path("id")int id);
+    Call<ResponseModelResep> listResep(@Path("id")String id);
     @GET("riwayat_pemeriksaan/{id}")
     Call<ResponseModelRiwayat> listRiwayat(@Path("id") String id);
     @GET("detail_pemeriksaan/{id}")
