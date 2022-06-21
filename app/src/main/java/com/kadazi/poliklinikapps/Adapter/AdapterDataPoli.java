@@ -59,6 +59,7 @@ public class AdapterDataPoli extends RecyclerView.Adapter<AdapterDataPoli.Holder
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, DetailJadwalDokter.class);
                 intent.putExtra("kode_poli",dm.getKode_poli());
+                intent.putExtra("nama",dm.getNama());
                 ctx.startActivity(intent);
             }
         });
@@ -67,6 +68,7 @@ public class AdapterDataPoli extends RecyclerView.Adapter<AdapterDataPoli.Holder
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, DetailJadwalDokter.class);
                 intent.putExtra("kode_poli",dm.getKode_poli());
+                intent.putExtra("nama",dm.getNama());
                 ctx.startActivity(intent);
             }
         });

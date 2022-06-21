@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -105,14 +106,19 @@ public class EditPasienActivity extends AppCompatActivity {
                 no_hp.setText(response.body().getNo_hp());
                 alamat.setText(response.body().getAlamat());
 
-
-
             }
 
             @Override
             public void onFailure(Call<ResponseModelPasienEdit> call, Throwable t){
                 Log.d("ggl",t.getMessage());
 
+            }
+        });
+        ImageButton btn = findViewById(R.id.btn_kembali2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
@@ -136,9 +142,8 @@ public class EditPasienActivity extends AppCompatActivity {
                 String message  = response.body().getMessage();
 
                 if (status){
-                    Intent intent = new Intent(EditPasienActivity.this,PengaturanActivity.class);
+                    finish();
                     Toast.makeText(getApplicationContext(), "Perubahan Berhasil Disimpan!", Toast.LENGTH_SHORT).show();
-                    startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Perubahan Gagal Disimpan!", Toast.LENGTH_SHORT).show();
                 }
