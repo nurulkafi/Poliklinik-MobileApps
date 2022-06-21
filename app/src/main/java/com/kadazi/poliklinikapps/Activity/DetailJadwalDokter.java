@@ -48,6 +48,7 @@ public class DetailJadwalDokter extends AppCompatActivity {
         rvData.setLayoutManager(lmData);
         String kode_poli = getIntent().getStringExtra("kode_poli");
         tv_poli = findViewById(R.id.textView4);
+        tv_poli.setText(getIntent().getStringExtra("nama"));
         tampilData(kode_poli);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
@@ -104,7 +105,6 @@ public class DetailJadwalDokter extends AppCompatActivity {
                 boolean status = response.body().isSuccess();
                 String message  = response.body().getMessage();
 
-                tv_poli.setText(response.body().getPoli());
                 data = response.body().getData();
                 adData = new AdapterDataJadwal(DetailJadwalDokter.this, data);
                 rvData.setAdapter(adData);
