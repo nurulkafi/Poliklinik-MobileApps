@@ -53,7 +53,7 @@ public class AdapterDataPoli extends RecyclerView.Adapter<AdapterDataPoli.Holder
     public void onBindViewHolder(@NonNull AdapterDataPoli.HolderDataPoli holder, int position) {
         DataModelPoli dm = list.get(position);
         holder.poli.setText(dm.getNama());
-        Picasso.with(ctx).load("https://kadazi-klinik.herokuapp.com/public/" + dm.getImage()  ).into(holder.img);
+        Picasso.with(ctx).load("https://kadazi-klinik.herokuapp.com/" + dm.getImage()  ).into(holder.img);
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

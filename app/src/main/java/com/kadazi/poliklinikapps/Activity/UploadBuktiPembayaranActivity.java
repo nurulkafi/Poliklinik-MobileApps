@@ -130,6 +130,7 @@ public class UploadBuktiPembayaranActivity extends AppCompatActivity {
 
                         Toast.makeText(UploadBuktiPembayaranActivity.this,"Pesan : "+pesan, Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(UploadBuktiPembayaranActivity.this,PembayaranActivity.class);
+                        Toast.makeText(getApplicationContext(), "Upload Berhasil!", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
                     }
 
