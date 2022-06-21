@@ -19,34 +19,19 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/poppins"
         android:text="Edit Pasien"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/nama"
-        android:layout_width="312dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/edittextstyle"
-        android:fontFamily="@font/poppins"
-        android:hint="Nama"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nik" />
-
-    <EditText
         android:id="@+id/nik"
-        android:layout_width="312dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="40dp"
@@ -61,8 +46,24 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edittextstyle"
+        android:fontFamily="@font/poppins"
+        android:hint="Nama"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nik" />
+
+    <EditText
         android:id="@+id/tgl_lahir"
-        android:layout_width="312dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
@@ -78,7 +79,7 @@
 
     <EditText
         android:id="@+id/jk"
-        android:layout_width="312dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
@@ -94,7 +95,7 @@
 
     <EditText
         android:id="@+id/alamat"
-        android:layout_width="312dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
@@ -110,7 +111,7 @@
 
     <EditText
         android:id="@+id/no_hp"
-        android:layout_width="312dp"
+        android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
@@ -125,20 +126,23 @@
         app:layout_constraintTop_toBottomOf="@+id/alamat" />
 
     <Button
-        android:id="@+id/Submit"
-        android:layout_width="312dp"
+        android:id="@+id/submit_edit"
+        android:layout_width="match_parent"
         android:layout_height="37dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/button1style"
         android:fontFamily="@font/poppins"
         android:text="Submit"
         android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/no_hp"
+        app:layout_constraintVertical_bias="0.046"
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

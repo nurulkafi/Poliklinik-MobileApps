@@ -6,6 +6,7 @@ import com.kadazi.poliklinikapps.Model.ResponseModelAntrian;
 import com.kadazi.poliklinikapps.Model.ResponseModelDetailJadwal;
 import com.kadazi.poliklinikapps.Model.ResponseModelDetailPemeriksaan;
 import com.kadazi.poliklinikapps.Model.ResponseModelMediaPembayaran;
+import com.kadazi.poliklinikapps.Model.ResponseModelPasienEdit;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaran;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaranBiaya;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaranResep;
@@ -30,6 +31,7 @@ import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.PUT;
 import retrofit2.http.Part;
 import retrofit2.http.Path;
 
@@ -89,8 +91,8 @@ public interface APIRequestData {
             @Field("nik") String nik,
             @Field("nama") String nama,
             @Field("tgl_lahir") String tgl_lahir,
-            @Field("jk") String jk,
             @Field("alamat") String alamat,
+            @Field("jk") String jk,
             @Field("no_hp") String no_hp
     );
     @Multipart
@@ -99,6 +101,18 @@ public interface APIRequestData {
             @Part("id") RequestBody id,
             @Part MultipartBody.Part image
     );
+    @GET("pasien/{id}/edit")
+    Call<ResponseModelPasienEdit> edit_pasien(@Path("id") String id);
 
-
+    @FormUrlEncoded
+    @PUT("pasien/{id}")
+    Call<ResponseModel> edit_pasien(
+            @Path("id") String id,
+            @Field("nik") String nik,
+            @Field("nama") String nama,
+            @Field("tgl_lahir") String tgl_lahir,
+            @Field("alamat") String alamat,
+            @Field("jk") String jk,
+            @Field("no_hp") String no_hp
+    );
 }

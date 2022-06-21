@@ -61,7 +61,7 @@
             android:background="@drawable/edittextstyle"
             android:fontFamily="@font/poppins"
             android:hint="Nama"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.49"
