@@ -16,18 +16,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Edit Akun"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppins"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/back_edit"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="48dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <EditText
         android:id="@+id/password"
@@ -36,6 +47,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="24dp"
+        android:inputType="textPassword"
         android:background="@drawable/edittextstyle"
         android:fontFamily="@font/poppins"
         android:hint="Password"

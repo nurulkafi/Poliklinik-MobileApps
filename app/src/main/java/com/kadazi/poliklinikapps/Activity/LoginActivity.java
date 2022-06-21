@@ -86,9 +86,10 @@ public class LoginActivity extends AppCompatActivity {
                 String message  = response.body().getMessage();
                 String id = response.body().getId();
                 String pasien_id = response.body().getPasien_id();
+                String name = response.body().getName();
 
                 SQLiteDatabase db = dbcenter.getWritableDatabase();
-                String sql = "INSERT INTO login (id, email,password,pasien_id) VALUES ('"+id+"', '"+email+"', '"+password+"','"+pasien_id+"');";
+                String sql = "INSERT INTO login (id, email,password,pasien_id,name) VALUES ('"+id+"', '"+email+"', '"+password+"','"+pasien_id+"','"+name+"');";
                 db.execSQL(sql);
 
                 if (status){

@@ -131,10 +131,11 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         />
+
     <ImageButton
         android:id="@+id/back_daftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="48dp"
         android:background="@android:color/transparent"
