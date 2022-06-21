@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroServer {
 
-    private static final String baseURL ="http://192.168.1.4/poliklinik/public/api/";
+    private static final String baseURL ="https://kadazi-klinik.herokuapp.com/api/";
 
 
     private static Retrofit retro;

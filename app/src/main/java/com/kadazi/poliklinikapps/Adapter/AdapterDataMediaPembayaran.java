@@ -46,7 +46,7 @@ public class AdapterDataMediaPembayaran extends RecyclerView.Adapter<AdapterData
         holder.nama_bank.setText(dm.getNama_bank());
         holder.no_rek.setText("Rp. " + dm.getNo_rekening());
         holder.atas_nama.setText(dm.getAtas_nama());
-        Picasso.with(ctx).load("http://192.168.137.1/poliklinik/public/" + dm.getLogo()  ).into(holder.logo);
+        Picasso.with(ctx).load("https://kadazi-klinik.herokuapp.com/public/" + dm.getLogo()  ).into(holder.logo);
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

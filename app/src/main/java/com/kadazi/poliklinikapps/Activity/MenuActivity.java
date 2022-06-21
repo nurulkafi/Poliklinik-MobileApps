@@ -17,7 +17,7 @@ import com.kadazi.poliklinikapps.R;
 public class MenuActivity extends AppCompatActivity {
     private BottomNavigationView ba;
     private LinearLayout jad;
-    private ImageButton jadwal,pembayaran,resep,antrian,riwayat,pendaftaran;
+    private ImageButton jadwal, daftar, pembayaran, resep, antrian, riwayat, pendaftaran;
 
 
     @Override
@@ -31,7 +31,6 @@ public class MenuActivity extends AppCompatActivity {
         antrian = findViewById(R.id.btn_antrian);
         riwayat = findViewById(R.id.btn_riwayat);
         pendaftaran = findViewById(R.id.btn_daftar);
-        daftar = findViewById(R.id.btn_daftar);
         antrian = findViewById(R.id.btn_antrian);
         riwayat = findViewById(R.id.btn_riwayat);
 
@@ -40,21 +39,21 @@ public class MenuActivity extends AppCompatActivity {
         jad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),JadwalPraktekActivity.class);
+                Intent intent = new Intent(getApplicationContext(), JadwalPraktekActivity.class);
                 startActivity(intent);
             }
         });
         jadwal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),JadwalPraktekActivity.class);
+                Intent intent = new Intent(getApplicationContext(), JadwalPraktekActivity.class);
                 startActivity(intent);
             }
         });
         pembayaran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),PembayaranActivity.class);
+                Intent intent = new Intent(getApplicationContext(), PembayaranActivity.class);
                 startActivity(intent);
             }
         });
@@ -62,26 +61,21 @@ public class MenuActivity extends AppCompatActivity {
         resep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ResepActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ResepActivity.class);
                 startActivity(intent);
             }
         });
         antrian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AntrianActivity.class);
-
-        daftar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),DaftarActivity.class);
+                Intent intent = new Intent(getApplicationContext(), AntrianActivity.class);
                 startActivity(intent);
             }
         });
         riwayat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RiwayatPemeriksaanActivity.class);
                 startActivity(intent);
             }
         });
@@ -89,33 +83,30 @@ public class MenuActivity extends AppCompatActivity {
         pendaftaran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),DaftarActivity.class);
+                Intent intent = new Intent(getApplicationContext(), DaftarActivity.class);
                 startActivity(intent);
             }
         });
-
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch(item.getItemId())
-                {
+                switch (item.getItemId()) {
                     case R.id.page_1:
                         return true;
                     case R.id.page_2:
-                        startActivity(new Intent(getApplicationContext(),AntrianActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), AntrianActivity.class));
+                        overridePendingTransition(0, 0);
                         return false;
                     case R.id.page_3:
-                        startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), RiwayatPemeriksaanActivity.class));
+                        overridePendingTransition(0, 0);
                         return false;
                     case R.id.page_4:
-                        startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
-                        overridePendingTransition(0,0);
+                        startActivity(new Intent(getApplicationContext(), PengaturanActivity.class));
+                        overridePendingTransition(0, 0);
                         return false;
                 }
                 return false;
