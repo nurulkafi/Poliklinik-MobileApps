@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kadazi.poliklinikapps.Activity.DetailPemeriksaanActivity;
+import com.kadazi.poliklinikapps.Activity.RiwayatPemeriksaanResepActivity;
 import com.kadazi.poliklinikapps.Api.APIRequestData;
 import com.kadazi.poliklinikapps.Api.RetroServer;
 import com.kadazi.poliklinikapps.Model.DataModelDetailPemeriksaan;
@@ -54,7 +55,7 @@ public class AdapterDataRiwayat extends RecyclerView.Adapter<AdapterDataRiwayat.
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tampilData(Integer.parseInt(dm.getId()));
+                tampilData(String.valueOf(dm.getId()));
             }
         });
     }
@@ -79,9 +80,9 @@ public class AdapterDataRiwayat extends RecyclerView.Adapter<AdapterDataRiwayat.
         }
 
     }
-    public void tampilData(int id){
+    public void tampilData(String id_pasien){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ResponseModelDetailPemeriksaan> tampilData = arData.Detail(id);
+        Call<ResponseModelDetailPemeriksaan> tampilData = arData.Detail_riwayat(id_pasien);
 
         tampilData.enqueue(new Callback<ResponseModelDetailPemeriksaan>() {
             @Override

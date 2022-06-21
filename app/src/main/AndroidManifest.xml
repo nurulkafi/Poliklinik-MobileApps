@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PoliklinikApps">
         <activity
+            android:name=".Activity.RiwayatPemeriksaanResepActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.UploadBuktiPembayaranActivity"
             android:exported="false" />
         <activity
@@ -31,8 +34,8 @@
             android:exported="false" />
         <activity
             android:name=".Activity.AntrianActivity"
-            android:exported="false"/>
-            <activity
+            android:exported="false" />
+        <activity
             android:name=".Activity.PembayaranActivity"
             android:exported="false" />
         <activity

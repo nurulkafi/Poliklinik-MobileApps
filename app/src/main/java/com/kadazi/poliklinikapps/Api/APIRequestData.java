@@ -9,6 +9,7 @@ import com.kadazi.poliklinikapps.Model.ResponseModelMediaPembayaran;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaran;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaranBiaya;
 import com.kadazi.poliklinikapps.Model.ResponseModelPembayaranResep;
+import com.kadazi.poliklinikapps.Model.ResponseModelPemeriksaanResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelPoli;
 import com.kadazi.poliklinikapps.Model.ResponseModelPendaftaran;
 import com.kadazi.poliklinikapps.Model.ResponseModelPendaftaranBaru;
@@ -46,7 +47,9 @@ public interface APIRequestData {
     @GET("riwayat_pemeriksaan/{id}")
     Call<ResponseModelRiwayat> listRiwayat(@Path("id") String id);
     @GET("detail_pemeriksaan/{id}")
-    Call<ResponseModelDetailPemeriksaan> Detail(@Path("id") int id);
+    Call<ResponseModelDetailPemeriksaan> Detail_riwayat(@Path("id") String id);
+    @GET("pemeriksaan_resep/{id}")
+    Call<ResponseModelPemeriksaanResep> Riwayat_resep(@Path("id") String id);
     @GET("details_resep/{id}")
     Call<ResponseModelResepDetails> DetailS_Resep(@Path("id") int id);
     @GET("jadwal_dokter/{id}")
