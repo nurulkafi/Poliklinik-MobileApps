@@ -20,7 +20,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
         android:text="Detail Riwayat Pemeriksaan"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -60,24 +60,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginStart="50dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Nama Dokter"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text=":"
                     android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text=":"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/detail_pemeriksaan_dokter"
                     android:layout_width="99dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:fontFamily="@font/poppins"
                     android:text="Nama Dokter"
                     android:textColor="@color/black"
                     android:textSize="12sp"
@@ -94,24 +99,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Nama Poliklinik"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=":"
                 android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text=":"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/detail_pemeriksaan_poliklinik"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:fontFamily="@font/poppins"
                 android:text="Nama Poliklinik"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -128,24 +138,29 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginStart="50dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Tanggal Pemeriksaan"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text=":"
                     android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text=":"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/detail_pemeriksaan_tgl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:fontFamily="@font/poppins"
                     android:text="Tanggal Pemeriksaan"
                     android:textColor="@color/black"
                     android:textSize="12sp"
@@ -159,29 +174,35 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="50dp">
+
                 <TextView
                     android:layout_width="147dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginStart="50dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Keluhan"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text=":"
                     android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text=":"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/keluhan_pemeriksaan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:fontFamily="@font/poppins"
                     android:text="Keluhan"
                     android:textColor="@color/black"
                     android:textSize="12sp"
@@ -198,24 +219,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Diagnosa"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=":"
                 android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text=":"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/diagnosa_pemeriksaan"
                 android:layout_width="81dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:fontFamily="@font/poppins"
                 android:text="Diagnosa"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -232,24 +258,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Perawatan"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=":"
                 android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text=":"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/perawatan_pemeriksaan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:fontFamily="@font/poppins"
                 android:text="Perawatan"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -266,24 +297,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Tindakan"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=":"
                 android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text=":"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tindakan_pemeriksaan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:fontFamily="@font/poppins"
                 android:text="Tindakan"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -300,24 +336,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Berat Badan"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=":"
                 android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text=":"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/bb_pemeriksaan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
+                android:fontFamily="@font/poppins"
                 android:text="Berat Badan"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -334,24 +375,29 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginStart="50dp"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Tensi Darah"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text=":"
                 android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text=":"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tensi_pemeriksaan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
+                android:fontFamily="@font/poppins"
                 android:text="Tensi Darah"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -360,13 +406,16 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/pemeriksaan_detail"
-                android:layout_width="160dp"
+                android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_gravity="right"
+                android:textAlignment="center"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/viewdetails"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Resep"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
         </LinearLayout>
 
 
@@ -383,5 +432,14 @@
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
         />
-
+    <ImageButton
+        android:id="@+id/back_detail_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="48dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

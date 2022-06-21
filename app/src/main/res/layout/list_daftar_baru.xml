@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="171dp"
+    android:layout_height="180dp"
     android:layout_margin="10dp"
     app:cardBackgroundColor="@color/Gray"
     app:cardCornerRadius="10dp"
@@ -31,27 +31,32 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Dokter"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text=":"
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/daftar_baru_nama_dokter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:layout_marginLeft="100dp"
                     android:layout_margin="5dp"
+                    android:layout_marginLeft="100dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Dokter "
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -69,16 +74,19 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Nama Poliklinik "
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text=":"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -91,6 +99,7 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Nama Poliklinik"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -107,16 +116,19 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Jam Mulai "
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text=":"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -129,6 +141,7 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Jam_Mulai"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -146,16 +159,19 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Jam Selesai "
                     android:textColor="@color/white"
                     android:textSize="12sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text=":"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -168,6 +184,7 @@
                     android:layout_gravity="left"
                     android:layout_margin="5dp"
                     android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins"
                     android:text="Jam Selesai"
                     android:textColor="@color/white"
                     android:textSize="12sp"
@@ -178,13 +195,16 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="270dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="125dp"
-        android:background="@drawable/button2style"
-        android:textColor="@color/white"
+        android:id="@+id/daftar_baru_pilih"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/button2style"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingTop="4dp"
         android:text="Pilih"
-        android:id="@+id/daftar_baru_pilih"/>
+        android:textAlignment="center"
+        android:textColor="@color/white" />
 
 </androidx.cardview.widget.CardView>

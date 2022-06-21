@@ -17,7 +17,7 @@ import com.kadazi.poliklinikapps.R;
 public class MenuActivity extends AppCompatActivity {
     private BottomNavigationView ba;
     private LinearLayout jad;
-    private ImageButton jadwal,pembayaran;
+    private ImageButton jadwal,pembayaran,daftar,antrian,riwayat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,10 @@ public class MenuActivity extends AppCompatActivity {
         jadwal = findViewById(R.id.btn_jadwal);
         pembayaran = findViewById(R.id.btn_pembayaran);
         jad = findViewById(R.id.btn_jad);
+        daftar = findViewById(R.id.btn_daftar);
+        antrian = findViewById(R.id.btn_antrian);
+        riwayat = findViewById(R.id.btn_riwayat);
+
         //Jadwal Dokter
         jad.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +49,27 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),PembayaranActivity.class);
+                startActivity(intent);
+            }
+        });
+        daftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),DaftarActivity.class);
+                startActivity(intent);
+            }
+        });
+        riwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class);
+                startActivity(intent);
+            }
+        });
+        antrian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AntrianActivity.class);
                 startActivity(intent);
             }
         });
