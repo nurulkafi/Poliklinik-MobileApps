@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -70,6 +72,8 @@ public class DetailResepActivity extends AppCompatActivity {
                 switch(item.getItemId())
                 {
                     case R.id.page_1:
+                        startActivity(new Intent(getApplicationContext(),MenuActivity.class));
+                        overridePendingTransition(0,0);
                         return false;
                     case R.id.page_2:
                         startActivity(new Intent(getApplicationContext(),ResepActivity.class));
@@ -85,6 +89,13 @@ public class DetailResepActivity extends AppCompatActivity {
                         return false;
                 }
                 return false;
+            }
+        });
+        ImageButton btn = findViewById(R.id.btn_kembali);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

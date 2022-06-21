@@ -262,7 +262,6 @@
                         android:layout_gravity="center"
                         android:background="@drawable/circlebackground"
                         android:src="@drawable/jadwallogo"
-
                         />
 
                     <TextView
