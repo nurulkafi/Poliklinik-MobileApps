@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -17,20 +18,31 @@ import com.kadazi.poliklinikapps.SQLite.DataHelper;
 
 public class PengaturanActivity extends AppCompatActivity {
     private BottomNavigationView ba;
-    TextView logout,editakun,laporkanmasalah,editdatapasien,helpsupport;
-
+    TextView logout,editakun,laporkanmasalah,editdatapasien,helpsupport,name_akun,email;
+    protected Cursor cursor;
     DataHelper dbcenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pengaturan);
+
+        name_akun = findViewById(R.id.name_akun);
+        email = findViewById(R.id.email);
         dbcenter = new DataHelper(this);
+        SQLiteDatabase db = dbcenter.getReadableDatabase();
+        cursor = db.rawQuery("SELECT * FROM login LIMIT 1", null);
+        cursor.moveToFirst();
+        cursor.moveToPosition(0);
+        String names = cursor.getString(4).toString();
+        String emails = cursor.getString(1).toString();
         logout = findViewById(R.id.logout);
         editakun = findViewById(R.id.editakun);
         editdatapasien = findViewById(R.id.editdatapasien);
         helpsupport = findViewById(R.id.helpsupport);
         laporkanmasalah = findViewById(R.id.laporkanmasalah);
+        name_akun.setText(names);
+        email.setText(emails);
 
 
 

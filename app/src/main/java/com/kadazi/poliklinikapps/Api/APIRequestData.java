@@ -115,4 +115,12 @@ public interface APIRequestData {
             @Field("jk") String jk,
             @Field("no_hp") String no_hp
     );
+
+    @FormUrlEncoded
+    @PUT("auth/{id}")
+    Call<ResponseModel> ubah_user(
+            @Path("id") String id,
+            @Field("email") String email,
+            @Field("password") String password
+    );
 }

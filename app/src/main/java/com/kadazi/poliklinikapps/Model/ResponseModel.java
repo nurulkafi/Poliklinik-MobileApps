@@ -3,7 +3,17 @@ package com.kadazi.poliklinikapps.Model;
 public class ResponseModel {
     private boolean success;
     private String message;
+    private String name;
     private String id;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String pasien_id;
 
     public boolean isSuccess() {
