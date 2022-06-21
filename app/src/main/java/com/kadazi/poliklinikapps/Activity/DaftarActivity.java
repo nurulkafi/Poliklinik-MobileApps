@@ -61,7 +61,6 @@ public class DaftarActivity extends AppCompatActivity {
         cursor.moveToFirst();
         cursor.moveToPosition(0);
         String pasien_id = cursor.getString(3).toString();
-        tampilData(pasien_id);
         Button button= (Button) findViewById(R.id.daftar_baru);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -114,6 +113,8 @@ public class DaftarActivity extends AppCompatActivity {
             }
         });
         cr = findViewById(R.id.daftar_kosong);
+        cr.setVisibility(View.GONE);
+        tampilData(pasien_id);
     }
 
     public void tampilData(String id_pasien) {

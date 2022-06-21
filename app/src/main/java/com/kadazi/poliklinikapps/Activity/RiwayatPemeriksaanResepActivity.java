@@ -10,18 +10,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.kadazi.poliklinikapps.Adapter.AdapterDataPembayaranResep;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataPemeriksaanResep;
 import com.kadazi.poliklinikapps.Api.APIRequestData;
 import com.kadazi.poliklinikapps.Api.RetroServer;
-import com.kadazi.poliklinikapps.Model.DataModelPembayaranResep;
 import com.kadazi.poliklinikapps.Model.DataModelPemeriksaanResep;
-import com.kadazi.poliklinikapps.Model.ResponseModelPembayaranResep;
 import com.kadazi.poliklinikapps.Model.ResponseModelPemeriksaanResep;
 import com.kadazi.poliklinikapps.R;
 
@@ -32,63 +28,39 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DetailPemeriksaanActivity extends AppCompatActivity {
+public class RiwayatPemeriksaanResepActivity extends AppCompatActivity {
     TextView Nama_dokter;
     TextView Nama_poli;
     TextView tgl_pendaftaran;
-    TextView keluhan;
-    TextView diagnosa;
-    TextView perawatan;
-    TextView tindakan;
-    TextView bb;
-    TextView tensi;
     ImageButton back;
-    Button resep;
+    private RecyclerView rvData;
+    private RecyclerView.Adapter adData;
+    private RecyclerView.LayoutManager lmData;
+    private List<DataModelPemeriksaanResep> data = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_pemeriksaan);
+        setContentView(R.layout.activity_riwayat_pemeriksaan_resep);
+
+        rvData = findViewById(R.id.pemeriksaan_resep);
+        lmData = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        rvData.setLayoutManager(lmData);
+        String id = getIntent().getStringExtra("id");
+        tampilriwayatresep(id);
 
         Nama_dokter = findViewById(R.id.detail_pemeriksaan_dokter);
         Nama_poli = findViewById(R.id.detail_pemeriksaan_poliklinik);
         tgl_pendaftaran = findViewById(R.id.detail_pemeriksaan_tgl);
-        keluhan = findViewById(R.id.keluhan_pemeriksaan);
-        diagnosa = findViewById(R.id.diagnosa_pemeriksaan);
-        perawatan = findViewById(R.id.perawatan_pemeriksaan);
-        tindakan = findViewById(R.id.tindakan_pemeriksaan);
-        bb = findViewById(R.id.bb_pemeriksaan);
-        tensi = findViewById(R.id.tensi_pemeriksaan);
-        resep = findViewById(R.id.pemeriksaan_detail);
+
         Intent terima = getIntent();
         String xnama_dokter = terima.getStringExtra("nama");
         String xnama_poli = terima.getStringExtra("poli");
         String xtgl_pendaftaran = terima.getStringExtra("tgl_pendaftaran");
-        String xkeluhan = terima.getStringExtra("keluhan");
-        String xdiagnosa = terima.getStringExtra("diagnosa");
-        String xperawatan = terima.getStringExtra("perawatan");
-        String xtindakan = terima.getStringExtra("tindakan");
-        String xbb = terima.getStringExtra("bb");
-        String xtensi = terima.getStringExtra("tensi");
-        resep.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DetailPemeriksaanActivity.this, RiwayatPemeriksaanResepActivity.class);
-                intent.putExtra("nama",xnama_dokter);
-                intent.putExtra("poli",xnama_poli);
-                intent.putExtra("tgl_pendaftaran",xtgl_pendaftaran);
-                startActivity(intent);
-            }
-        });
 
         Nama_dokter.setText(xnama_dokter);
         Nama_poli.setText(xnama_poli);
         tgl_pendaftaran.setText(xtgl_pendaftaran);
-        keluhan.setText(xkeluhan);
-        diagnosa.setText(xdiagnosa);
-        perawatan.setText(xperawatan);
-        tindakan.setText(xtindakan);
-        bb.setText(xbb+"Kg");
-        tensi.setText(xtensi+"mmHg");
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -115,11 +87,35 @@ public class DetailPemeriksaanActivity extends AppCompatActivity {
                 return false;
             }
         });
-        back = findViewById(R.id.back_detail_riwayat);
+        back = findViewById(R.id.btn_kembali);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+    }
+    public void tampilriwayatresep(String id_pemeriksaan){
+        APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
+        Call<ResponseModelPemeriksaanResep> tampilData = arData.Riwayat_resep("1");
+
+        tampilData.enqueue(new Callback<ResponseModelPemeriksaanResep>() {
+            @Override
+            public void onResponse(Call<ResponseModelPemeriksaanResep> call, Response<ResponseModelPemeriksaanResep> response) {
+                boolean status = response.body().isSuccess();
+                String message  = response.body().getMessage();
+
+                data = response.body().getData();
+                adData = new AdapterDataPemeriksaanResep(RiwayatPemeriksaanResepActivity.this, data);
+                rvData.setAdapter(adData);
+                adData.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModelPemeriksaanResep> call, Throwable t){
+                Log.d("ggl",t.getMessage());
+
             }
         });
     }

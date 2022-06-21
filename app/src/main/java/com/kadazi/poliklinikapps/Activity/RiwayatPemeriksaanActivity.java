@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.kadazi.poliklinikapps.Adapter.AdapterDataPendaftaran;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataRiwayat;
 import com.kadazi.poliklinikapps.Api.APIRequestData;
 import com.kadazi.poliklinikapps.Api.RetroServer;
@@ -56,7 +57,6 @@ public class RiwayatPemeriksaanActivity extends AppCompatActivity {
         cursor.moveToFirst();
         cursor.moveToPosition(0);
         String pasien_id = cursor.getString(3).toString();
-        tampilData(pasien_id);
         srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -65,6 +65,53 @@ public class RiwayatPemeriksaanActivity extends AppCompatActivity {
                 srlData.setRefreshing(false);
             }
         });
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.page_1:
+                        startActivity(new Intent(getApplicationContext(),MenuActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_2:
+                        startActivity(new Intent(getApplicationContext(),AntrianActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_3:
+                        startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                    case R.id.page_4:
+                        startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
+                        overridePendingTransition(0,0);
+                        return false;
+                }
+                return false;
+            }
+        });
+        back = findViewById(R.id.back_riwayat);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        SwipeRefreshLayout srlData = findViewById(R.id.srlData);
+        srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlData.setRefreshing(true);
+                tampilData(pasien_id);
+                srlData.setRefreshing(false);
+            }
+        });
+        cr = findViewById(R.id.riwayat_pemeriksaan_kosong);
+        cr.setVisibility(View.GONE);
+        tampilData(pasien_id);
     }
     public void tampilData(String id_pasien){
         APIRequestData arData = RetroServer.konekRetrofit().create(APIRequestData.class);
@@ -78,48 +125,20 @@ public class RiwayatPemeriksaanActivity extends AppCompatActivity {
 
                 Log.d("true",message);
                 listData = response.body().getData();
-                Log.d("berhasil","berhasil");
-                adData = new AdapterDataRiwayat(RiwayatPemeriksaanActivity.this, listData);
-                rvData.setAdapter(adData);
-                adData.notifyDataSetChanged();
-                BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
-                bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                        switch(item.getItemId())
-                        {
-                            case R.id.page_1:
-                                return false;
-                            case R.id.page_2:
-                                startActivity(new Intent(getApplicationContext(),AntrianActivity.class));
-                                overridePendingTransition(0,0);
-                                return false;
-                            case R.id.page_3:
-                                startActivity(new Intent(getApplicationContext(),RiwayatPemeriksaanActivity.class));
-                                overridePendingTransition(0,0);
-                                return false;
-                            case R.id.page_4:
-                                startActivity(new Intent(getApplicationContext(),PengaturanActivity.class));
-                                overridePendingTransition(0,0);
-                                return false;
-                        }
-                        return false;
-                    }
-                });
+                if (listData.size() < 1){
+                    cr.setVisibility(View.VISIBLE);
+                }else{
+                    cr.setVisibility(View.GONE);
+                    adData = new AdapterDataRiwayat(RiwayatPemeriksaanActivity.this, listData);
+                    rvData.setAdapter(adData);
+                    adData.notifyDataSetChanged();
+                }
             }
 
             @Override
             public void onFailure(Call<ResponseModelRiwayat> call, Throwable t){
                 Log.d("ggl",t.getMessage());
 
-            }
-        });
-        back = findViewById(R.id.back_riwayat);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
             }
         });
     }
