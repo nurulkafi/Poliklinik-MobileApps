@@ -19,6 +19,7 @@ public class MenuActivity extends AppCompatActivity {
     private LinearLayout jad;
     private ImageButton jadwal,pembayaran,resep,antrian,riwayat,pendaftaran;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,10 @@ public class MenuActivity extends AppCompatActivity {
         antrian = findViewById(R.id.btn_antrian);
         riwayat = findViewById(R.id.btn_riwayat);
         pendaftaran = findViewById(R.id.btn_daftar);
+        daftar = findViewById(R.id.btn_daftar);
+        antrian = findViewById(R.id.btn_antrian);
+        riwayat = findViewById(R.id.btn_riwayat);
+
 
         //Jadwal Dokter
         jad.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +58,7 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         resep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +70,11 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),AntrianActivity.class);
+
+        daftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),DaftarActivity.class);
                 startActivity(intent);
             }
         });
@@ -74,6 +85,7 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         pendaftaran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

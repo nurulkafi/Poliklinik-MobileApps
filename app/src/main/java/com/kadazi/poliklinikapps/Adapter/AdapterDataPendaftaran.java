@@ -66,7 +66,7 @@ public class AdapterDataPendaftaran extends RecyclerView.Adapter<AdapterDataPend
             @Override
             public void onClick(View v) {
                 try{
-                    showDialog(Integer.valueOf(dm.getId()));
+                    showDialog(String.valueOf(dm.getId()));
                 } catch (Exception e){
                     e.printStackTrace();
                 }
@@ -99,7 +99,7 @@ public class AdapterDataPendaftaran extends RecyclerView.Adapter<AdapterDataPend
 
     }
 
-    public void showDialog(final int id) throws Exception {
+    public void showDialog(final String id) throws Exception {
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
 
         builder.setMessage("Apakah Anda Yakin?");

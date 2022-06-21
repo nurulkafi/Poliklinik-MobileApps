@@ -44,7 +44,7 @@ public interface APIRequestData {
     @GET("resep/{id}")
     Call<ResponseModelResep> listResep(@Path("id")String id);
     @GET("riwayat_pemeriksaan/{id}")
-    Call<ResponseModelRiwayat> listRiwayat(@Path("id") int id);
+    Call<ResponseModelRiwayat> listRiwayat(@Path("id") String id);
     @GET("detail_pemeriksaan/{id}")
     Call<ResponseModelDetailPemeriksaan> Detail(@Path("id") int id);
     @GET("details_resep/{id}")
@@ -64,12 +64,12 @@ public interface APIRequestData {
     @GET("media_pembayaran")
     Call<ResponseModelMediaPembayaran> media_pembayaran();
     @GET("daftar/{id}")
-    Call<ResponseModelPendaftaran> ListDaftar(@Path("id") int id);
+    Call<ResponseModelPendaftaran> ListDaftar(@Path("id") String id);
     @GET("daftar_baru")
     Call<ResponseModelPendaftaranBaru> ListDaftarBaru();
 
     @DELETE("hapus_daftar/{id}")
-    Call<ResponseModel> HapusDaftar(@Path("id") int id);
+    Call<ResponseModel> HapusDaftar(@Path("id") String id);
 
     @FormUrlEncoded
     @POST("pendaftaran")

@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kadazi.poliklinikapps.Adapter.AdapterDataPendaftaran;
@@ -30,6 +33,8 @@ import retrofit2.Response;
 
 public class DaftarBaruActivity extends AppCompatActivity {
     private BottomNavigationView ba;
+    private ImageButton back;
+    private SwipeRefreshLayout srlData;
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
@@ -40,10 +45,19 @@ public class DaftarBaruActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_baru);
 
+        srlData = findViewById(R.id.srlData);
         rvData = findViewById(R.id.list_daftar_baru);
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
         tampilData();
+        srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                srlData.setRefreshing(true);
+                tampilData();
+                srlData.setRefreshing(false);
+            }
+        });
     }
 
     public void tampilData() {
@@ -81,7 +95,7 @@ public class DaftarBaruActivity extends AppCompatActivity {
                     case R.id.page_1:
                         return false;
                     case R.id.page_2:
-                        startActivity(new Intent(getApplicationContext(), ResepActivity.class));
+                        startActivity(new Intent(getApplicationContext(), AntrianActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.page_3:
@@ -94,6 +108,13 @@ public class DaftarBaruActivity extends AppCompatActivity {
                         return false;
                 }
                 return false;
+            }
+        });
+        back = findViewById(R.id.back_daftar_baru);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
